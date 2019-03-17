@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    position: relative;
+}
+.top{
+    text-align: center;
+    background-color: #1d7ad9;
+    color: white;
+}
+.logo{
+
+}
+.login{
+    float: right;
+  padding: 10px 10px 10px 10px;
+    line-height: 30px;
+}
+.login:hover{
+    background-color: white;
+    color: black;
+    cursor:pointer;
+}
+.number{
+    float: left;
+    line-height: 50px;
+}
+.navbar-nav{
+    text-align: center;
+    border: 0;
+}
+@media screen and (min-width: 768px) {
+    .navbar-nav{
+        float: right;
+    }
+}
+.navbar-default{
+    background-color: white;
+    border: 0;
+}
+.navbar-default .navbar-nav>li>a{
+    padding: 10px 20px 10px 20px;
+   border: 1px solid #cccccc;
+   margin:10px 0 10px 10px;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #d1d2d4;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    background-color: #1d7ad9;
+    color: white;
+    cursor:pointer;
+}
+.long-box{
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+      padding: 0;
+    margin-right: -5px;
+    margin-left: -5px;
+    background-color: #cccccc;
+}
+.round{
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: #cccccc;
+}
+.choice{
+    display: inline-block;
+    margin-bottom: 40px;
+    text-align: center;
+}
+ .choice:hover .long-box{
+    background-color: #ff7f02;
+     cursor:pointer;
+ }
+ .choice:hover .round{
+     background-color: #ff7f02;
+     cursor:pointer;
+ }
+.choice:hover p{
+    color: #ff7f02;
+    cursor:pointer;
+}
+.choice p{
+    margin-top: 20px;
+    color: #cccccc;
+}
+ .rectangular-box{
+     float: right;
+ }
+@media screen and (max-width: 400px) {
+    .rectangular-box{
+        text-align: center;
+    }
+}
+.step{
+  padding-left: 10px;   border-left: 4px solid #1d7ad9;
+    font-size: 1.6rem;
+}
+.choice-item{
+   padding-left: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #e7e7e7;
+    color: #3583db;
+background-color: #f3f3f3;
+}
+.single-choice-style{
+    padding-left: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 1px 1px 1px 1px #d1d2d4;
+    text-indent: .15em;
+    line-height: 1;
+}
+input[type="radio"]:checked + label::before {
+    border-color: #1d7ad9;
+    background-clip: content-box;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.select{
+    outline:none;
+    height: 32px;
+    width: 90px;
+    margin-bottom: 30px;
+    background-image: url("../img/css10.1.png");
+    background-repeat:no-repeat;
+    background-position:64px 1px;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+@media screen and (min-width: 1000px){
+    .one{
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+.all-eyes{
+    text-align: center;
+    margin-top:10px ;
+    margin-left: 10px;
+}
+    @media screen and (min-width: 1000px) {
+    .all-eyes{
+        float: right;
+    }
+}
+.input-box{
+    width: 60px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid #cccccc;
+    outline:none;
+}
+.long{
+    text-align: center;
+    margin-top: 20px;
+ margin-left: 10px;
+}
+.option{
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+}
+.next-step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.next{
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: white;
+    background-color: #e15053;
+   border-radius: 5px;
+}
+.root{
+    text-align: center;
+    margin:0;
+    width: 100%;
+    background-color: #1d7ad9;
+    color: white;
+
+}
+.tail-like{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.tail:hover{
+    color:#1d7ad9 ;
+    cursor:pointer;
+}
+.carton-box{
+    border: 1px solid #cccccc;
+}
+@media screen and (max-width: 1000px)  {
+    .two{
+        width: 100%;
+    }
+}

@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+}
+main{
+    background-color:#29bde0;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color:#29bde0;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 40px 40px;
+    font-size: 30px;
+    border-bottom:2px solid #74d4eb;
+}
+.hot{
+    position: relative;
+text-align: center;
+    margin-top: 122px;
+    line-height: 30px;
+}
+.hot span{
+    position: absolute;
+     top: 69%;
+    left: calc(50% - 80px);
+    font-size: 40px;
+}
+.news{
+display: flex;
+    flex-wrap:wrap;
+justify-content: center;
+    margin: 0vw 23vw 50px 240px;
+    font-size: 30px;
+    color: #ffc865;
+}
+.vote p{
+    margin: 0px 0vw 0px 240px;
+    font-size: 25px;
+    color: white;
+}
+.vote span{
+    margin: 0px 0vw 0px 240px;
+    font-size: 25px;
+    color: white;
+}
+.tags{
+    margin: 0px 0vw 20px 240px;
+    font-size: 25px;
+    color: white;
+}
+.list{
+    margin: 0px 0vw 10px 240px;
+    font-size: 25px;
+    color: white;
+}
+.tips{
+    margin: 0px 0vw 10px 240px;
+    font-size: 25px;
+    color: white;
+}
+.status{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+}
+.status span{
+    margin-left: 240px;
+    font-size: 25px;
+}
+.status p{
+    font-size: 15px;
+    color: #c7c7c7;
+}
+.day {
+    margin:20px 0vw 0px 240px;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+.night{
+    margin: 0px 0vw 20px 240px;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+.link{
+    height: 150px;
+    border-bottom: 2px solid #dddddd;
+}
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+     background-color: #29bde0;
+    background-color:rgba(48,189,224,.5);
+}
+.btn{
+    width: 400px;
+    line-height:100px;
+    font-size: 40px;
+    margin: 40px 40px 40px 100px;
+    text-align: center;
+    background-color: #f66f6f;
+}
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+.noon{
+    width: 400px;
+    line-height:100px;
+    font-size: 40px;
+    margin: 40px 100px 40px 40px;
+    text-align: center;
+    background-color: #fbb435;
+}
+.noon a{
+    text-decoration: none;
+    color: black;
+}
+.q{
+    height: 100px;
+}

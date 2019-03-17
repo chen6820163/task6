@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    background: #eff0f4;
+}
+.register {
+    color: white;
+    float: left;
+    font-size: 40px;
+    margin-left: 20px;
+    line-height: 100px;
+}
+.box1{
+    background:#68cdd5;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.enter{
+    color: white;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 100px;
+}
+.close{
+    color: white;
+    float: right;
+    font-size: 40px;
+    margin-right: 20px;
+    line-height: 100px;
+}
+.button{
+    border: none;
+    outline:none;
+    font-size: 25px;
+    float: left;
+    line-height: 100px;
+    padding: 0;
+}
+.w{
+    border: none;
+    outline:none;
+    font-size: 25px;
+    float: left;
+    line-height: 100px;
+    padding: 0;
+}
+.e{
+    color: white;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 100px;
+}
+.box2{
+    background:#68cdd5;
+    text-align: center;
+    height: 100px;
+}
+.q{
+    float: right;
+    margin: 20px;
+    color: #68cdd5;
+    font-size: 30px;
+}
+.p{
+    width: 40px;
+    height: 60px;
+    margin: 20px;
+    float: left;
+    padding-right: 40px;
+    border:#eaedee;
+    border-right-style: groove;
+}
+.z{
+    background: white;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.x{
+    background: white;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.t{
+    width: 40px;
+    height: 60px;
+    margin: 20px;
+    float: left;
+    padding-right: 40px;
+    border:#eaedee;
+    border-right-style: groove;
+}

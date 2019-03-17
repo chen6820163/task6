@@ -1,0 +1,93 @@
+$Color:#199ce2;
+$Color1:#fff;
+$Color2:#f0f4f7;
+$Color3:#9b9c9c;
+$height:40px;
+$height1:8px;
+$font:1rem;
+body{
+  min-width:($height * 8) ;
+  max-width:($height * 19);
+  margin: 0 auto;
+  padding:0;
+  background-color: $Color2;
+  font-size: $font;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:$height ;
+  margin-bottom: ($height/4);
+  background-color: $Color;
+  color: $Color1;
+   .logo-img{
+     margin-right:$height;
+   }
+}
+.phone{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height:$height;
+  border-bottom: 1px solid #faf9f9;
+  background-color: $Color1;
+
+  .phone-img{
+    width: $height ;
+    text-align: center;
+    line-height: ($height/40);
+  }
+  .button{
+    border: none;
+    outline:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+  }
+}
+.entry{
+  text-align: center;
+  line-height: $height;
+  background-color: $Color;
+  margin:($height/2)($height/4) 0 ($height/4);
+  border-radius: ($height/8);
+  box-shadow:($height/20) ($height/20) ($height/20) ($height/20) $Color;
+  color:$Color1 ;
+}
+.forget{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:($height/2);
+  margin:($height/4);
+  font-size:( $font/2);
+  color: $Color3;
+}
+.other-accounts{
+display: flex;
+  align-items: center;
+  justify-content:  center;
+  margin:($height*5) 0  $height 0;
+  font-size:( $font/2);
+  color: $Color3;
+
+  .accounts{
+    margin:0($height/4) 0 ($height/4);
+  }
+   .box{
+     width:($height*2);
+     height:($height/40);
+     background-color: #dcdddf;
+   }
+}
+.third-party{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+
+  .disport{
+text-align: center;
+    margin:($height/4) ;
+    font-size: ( $font/2);
+  }
+}

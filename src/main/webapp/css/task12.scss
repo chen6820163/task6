@@ -1,0 +1,177 @@
+$size:40px;
+$color:#5fc0cd;
+$color1:#fff;
+$color2:#bebec2;
+$rem:1rem;
+body{
+min-width:($size * 8) ;
+max-width:($size * 19);
+margin: 0 auto;
+}
+.one-home-page{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width:($size * 8) ;
+  max-width:($size * 19);
+  margin: 0 auto;
+  position: fixed;
+  z-index:999999;
+  width: 100%;
+  top:0;
+height: $size;
+  font-size: $rem;
+  background-color:$color ;
+  color:$color1;
+
+  .one-home{
+    width: ($size/4);
+    height: ($size/4);
+    margin-left: ($size/4);
+    border-left: ($size/10) solid $color1;
+    border-bottom: ($size/10) solid $color1;
+    transform: rotate(45deg);
+  }
+
+}
+.nursing-workers{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: ($size*3.5);
+  margin-top: $size ;
+  background-image: url("../img/ptt5.png");
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  color:$color1 ;
+  .nursing-workers_left{
+    width: ($size * 1.4);
+    height: ($size * 1.4);
+    border-radius:50%;
+    margin: 0 ($size/4);
+    background:white;
+    background-image: url("../img/ptt.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position:($size/40) ($size/8) ;
+  }
+  .hark{
+    font-size: $rem;
+  }
+  .beijing{
+    display: flex;
+    align-items: center;
+    margin-top:($size/4) ;
+    font-size:($rem*0.8) ;
+  }
+}
+.level{
+  display: flex;
+  align-items: center;
+  height: $size;
+  border-bottom: ($size/40) solid $color2;
+  .level-son{
+    margin-left: ($size/4);
+    padding-left:($size/8) ;
+    border-left: ($size/10) solid $color;
+    font-size: ($rem*0.9);
+  }
+}
+.needs-nanny{
+  display: flex;
+  align-items: center;
+  height:$size ;
+  font-size:($rem*0.8) ;
+  border-bottom: ($size/40) solid $color2;
+  .home-right{
+    display: flex;
+    align-items: center;
+    margin-left:($size/2) ;
+    padding-right: ($size/8);
+    border-right: ($size/40) solid $color2;
+  }
+  .home-left{
+    display: flex;
+    align-items: center;
+    margin-left:($size/8) ;
+  }
+}
+.working-hours{
+  display: flex;
+  align-items: center;
+  height:$size ;
+  margin-left: ($size/4);
+  font-size:($rem*0.8) ;
+  border-bottom: ($size/40) solid $color2;
+  .working-hours_left{
+    color: $color2;
+    margin-left: ($size/4);
+    padding-right: ($size/2);
+    border-right: ($size/40) solid $color2;
+  }
+  .working-hours_right{
+    margin-left:($size/4) ;
+  }
+  .working-hours_red{
+    margin-left:($size/4);
+    color: #e26163;
+  }
+}
+.bottom-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width:($size * 8) ;
+  max-width:($size * 19);
+  margin: 0 auto;
+  position: fixed;
+  z-index:999999;
+  width: 100%;
+  bottom: 0;
+   height:($size*1.5);
+  background-color: $color1;
+.bottom-left{
+  text-align: center;
+  line-height: $size;
+  width: 40vw;
+  margin:  0 ($size/2);
+  border:($size/20) solid $color;
+  border-radius: ($size/6);
+}
+  .bottom-right{
+    text-align: center;
+    line-height: $size;
+    width: 40vw;
+    margin:  0 ($size/2);
+    border-radius: ($size/6);
+    background-color:$color ;
+  }
+}
+.hyperlink{
+  text-decoration: none;
+  color: $color;
+}
+.hyperlink1{
+  text-decoration: none;
+   color:$color1 ;
+}
+.working-hours-self{
+  display: flex;
+  align-items: center;
+  height:$size ;
+  margin-bottom:($size*8) ;
+  font-size:($rem*0.8) ;
+  border-bottom: ($size/40) solid $color2;
+  .working-hours_left{
+    color: $color2;
+    margin-left: ($size/2);
+    padding-right: ($size/2);
+    border-right: ($size/40) solid $color2;
+  }
+  .working-hours_right{
+    margin-left:($size/4) ;
+  }
+  .introduce{
+    min-width: 52px;
+  }
+}

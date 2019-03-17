@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<!-- http://tiles.apache.org/framework/config-reference.html -->
+<tiles-definitions>
+    <!-- tiles基础模板 -->
+    <!--主布局·-->
+    <definition name="template" template="/WEB-INF/jsp/template.jsp">
+        <!--定义模板-->
+        <put-attribute name="title" value="标题" />
+        <put-attribute name="head" value="/WEB-INF/jsp/layout/head.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp"/>
+    </definition>
+    <!--继承模板-->
+    <!--职业-->
+    <definition name="career" extends="template">
+        <put-attribute name="title" value="career" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/career.jsp" />
+    </definition>
+    <!--首页-->
+    <definition name="home" extends="template">
+        <put-attribute name="title" value="home" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/home.jsp" />
+    </definition>
+    <!--推荐-->
+    <definition name="recommend" extends="template">
+        <put-attribute name="title" value="recommend" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/recommend.jsp" />
+    </definition>
+    <!--关于-->
+    <definition name="about" extends="template">
+        <put-attribute name="title" value="about" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/recommend.jsp" />
+    </definition>
+    <!--注册-->
+    <definition name="reg" extends="template">
+        <put-attribute name="title" value="reg" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/reg.jsp" />
+    </definition>
+    <!--登录-->
+    <definition name="login" extends="template">
+        <put-attribute name="title" value="login" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/login.jsp" />
+    </definition>
+    <!--学生页-->
+    <definition name="index" extends="template">
+        <put-attribute name="title" value="学生信息管理" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/index.jsp" />
+    </definition>
+    <!--添加学生-->
+    <definition name="save_student" extends="template">
+        <put-attribute name="title" value="save_student" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/save_student.jsp" />
+    </definition>
+    <!--查询-->
+    <definition name="select" extends="template">
+        <put-attribute name="title" value="select" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/select.jsp" />
+    </definition>
+    <!--更新-->
+    <definition name="update" extends="template">
+        <put-attribute name="title" value="update" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body/update.jsp" />
+    </definition>
+</tiles-definitions>

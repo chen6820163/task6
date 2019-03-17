@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnshu.task4.dao.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.jnshu.task4.common.bean.Student">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="head_img" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="career" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="salary" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="career_brief" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="type" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="status" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="create_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="update_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, head_img, career, salary, career_brief, type, status, create_at, update_at
+  </sql>
+  <select id="queryByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from task4_student
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from task4_student
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jnshu.task4.common.bean.Student">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into task4_student (id, name, head_img, 
+      career, salary, career_brief, 
+      type, status, create_at, 
+      update_at)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{headImg,jdbcType=VARCHAR}, 
+      #{career,jdbcType=VARCHAR}, #{salary,jdbcType=INTEGER}, #{careerBrief,jdbcType=VARCHAR}, 
+      #{type,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{createAt,jdbcType=BIGINT}, 
+      #{updateAt,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jnshu.task4.common.bean.Student">
+    update task4_student
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="headImg != null">
+        head_img = #{headImg,jdbcType=VARCHAR},
+      </if>
+      <if test="career != null">
+        career = #{career,jdbcType=VARCHAR},
+      </if>
+      <if test="salary != null">
+        salary = #{salary,jdbcType=INTEGER},
+      </if>
+      <if test="careerBrief != null">
+        career_brief = #{careerBrief,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createAt != null">
+        create_at = #{createAt,jdbcType=BIGINT},
+      </if>
+      <if test="updateAt != null">
+        update_at = #{updateAt,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--模糊查询根据姓名-->
+  <select id="queryStudentsByName" parameterType="String" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from task4_student where 1=1
+    <if test="_parameter != null">
+      and name  like "%"#{name}"%"
+    </if>
+  </select>
+    <!--查询所有学生信息-->
+    <select id="queryAllStudent" parameterType="String" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
+        from task4_student
+    </select>
+
+    <select id="countAll" resultType="Integer">
+        select count(*) from task4_student
+    </select>
+
+    <select id="countByStatus" resultType="Integer">
+        select count(*) from task4_student
+        where salary>2000
+    </select>
+</mapper>

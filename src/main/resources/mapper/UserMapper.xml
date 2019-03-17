@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnshu.task4.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.jnshu.task4.common.bean.User">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="username" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="email" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="qq" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="address" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="create_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="update_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, password, email, qq, address, create_at, update_at
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from task5_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task5_user
+    where userName = #{userName}
+  </select>
+
+  <select id="queryAllUsers" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task5_user
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from task5_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.jnshu.task4.common.bean.User">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into task5_user (username, password,
+      email, qq, address, 
+      create_at, update_at)
+    values ( #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{email,jdbcType=VARCHAR}, #{qq,jdbcType=BIGINT}, #{address,jdbcType=VARCHAR}, 
+      #{createAt,jdbcType=BIGINT}, #{updateAt,jdbcType=BIGINT})
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.jnshu.task4.common.bean.User">
+    update task5_user
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=BIGINT},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="createAt != null">
+        create_at = #{creatAt,jdbcType=BIGINT},
+      </if>
+      <if test="updateAt != null">
+        update_at = #{updateAt,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>

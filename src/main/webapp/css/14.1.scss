@@ -1,0 +1,220 @@
+$color1:#fff;
+$color: #29b078;
+$color2: black;
+$size:40px;
+$font:1rem;
+body{
+  margin: 0;
+  padding: 0;
+  color: #999999;
+}
+.occupation {
+  margin: ($size/4) 0;
+  font-size:$font ;
+  cursor: pointer;
+   p a {
+    text-decoration: none;
+    color: black;
+  }
+}
+.occupation p span{
+  color: #29b078;
+}
+.learning {
+  line-height: 40px;
+  padding: ($size/2) 0;
+  margin: 0;
+  border-top: 1px solid #d0d6d9;
+  border-bottom: 1px solid #edf1f2;
+  font-size:$font ;
+  cursor: pointer;
+  p{
+    display: inline-block;
+    margin: 0;
+  }
+ span {
+    padding: 10px;
+    background-color: white;
+  }
+  a{
+    text-decoration: none;
+    color: #999999;
+  }
+}
+.learning span:hover{
+  background-color:#29b078;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.front-end-det-dir{
+  margin-bottom: (($size/2));
+  border-bottom:1px solid #d0d6d9;
+  color: black;
+  font-weight: bold;
+  font-size:($font*1.2) ;
+}
+.now{
+  margin-bottom: 20px;
+}
+.wrapper {
+  display: grid;
+  position: relative;
+  max-width: 450px;
+  margin: 20px 10px 20px 10px;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 180px 30px 30px 30px  30px 30px 30px 30px;
+  color: #c6c6c6;
+  border: 1px solid #d0d6d9;
+  font-size:($font*0.6) ;
+  cursor: pointer;
+}
+.gird-one{
+  grid-area: 1 / 5 / 1 / 1;
+  img{
+    margin: 10px 0  0 0;
+  }
+}
+@media screen and (max-width:400px){
+  .gird-one img{
+    width: 107%;
+  }
+}
+.gird-two {
+  grid-area: 1 / 11 / 1 /5;
+  padding:10px 15px;
+  word-break:break-all;
+  color: black;
+  .ios-box{
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+  }
+}
+.gird-three {
+  line-height: 30px;
+  grid-area: 2 / 6 / 2 / 1;
+  padding-left: 5px;
+  border-top: 1px solid #d0d6d9;
+  border-right: 1px solid #d0d6d9;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-four {
+  line-height: 30px;
+  grid-area: 2 / 11 / 2 / 6;
+  padding-left: 5px;
+  border-top: 1px solid #d0d6d9;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-five {
+  line-height: 30px;
+  grid-area: 3 / 6 / 3 / 1;
+  padding-left: 5px;
+  border-bottom: 1px solid #d0d6d9;
+  border-right: 1px solid #d0d6d9;
+}
+.gird-six {
+  line-height: 30px;
+  grid-area: 3 / 11 / 3 / 6;
+  padding-left: 5px;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-seven{
+  grid-area:4 / 5 / 4 / 1;
+  border-right: 1px solid #d0d6d9;
+}
+.gird-eight{
+  padding: 0 5px ;
+  line-height: 30px;
+  grid-area: 4 / 11 / 4 / 5;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-nine{
+  text-align: center;
+  grid-area:5 / 5 / 5/ 1;
+  line-height: 30px;
+  border-right: 1px solid #d0d6d9;
+}
+.gird-ten{
+  line-height: 30px;
+  padding: 0 5px ;
+  grid-area: 5 / 11 / 5 / 5;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-eleven{
+  padding: 0 5px;
+  line-height: 30px;
+  grid-area: 6 / 11 / 6 / 5;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-twelve{
+  grid-area: 6 / 5 / 6 / 1;
+  border-bottom: 1px solid #d0d6d9;
+  border-right: 1px solid #d0d6d9;
+}
+.gird-thirteen{
+  line-height: 30px;
+  padding-left:5px;
+  border-left: 1px solid #d0d6d9;
+  grid-area: 7 / 11 / 7 / 1;
+  border-bottom: 1px solid #d0d6d9;
+}
+.gird-fifteen{
+  padding-left: 5px;
+  grid-area: 8 / 11 / 8 / 1;
+  line-height: 30px;
+  font-size:($font*0.6)
+}
+.time{
+  color: black;
+}
+.ios-box{
+  text-align: center;
+  font-size: 0.8rem;
+  color: black;
+  font-weight: bold;
+}
+.number-n{
+  color: #f4716b;
+}
+.digit{
+  float: right;
+}
+.engineer{
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding: 80px 40px 40px 40px;
+  height: 270px;
+  color: white;
+  background-color:rgba(61,61,61,1);
+  /*animation:gogogo 2s infinite linear ;*/
+  cursor: pointer;
+  -webkit-animation:gogogo 2s; /* Safari and Chrome */
+}
+.engineer p{
+  color: white;
+}
+@-webkit-keyframes gogogo{
+  0%   {background:red; left:0px; top:0px;}
+  25%  {background:yellow; left:10px; top:0px; }
+  //50%  {background:blue; left:20px; top:20px;)}
+  //75%  {background:green; left:0px; top:10px;}
+  //100% {background:red; left:0px; top:0px;}
+  from {-webkit-transform: rotateY(0deg);}
+  to {-webkit-transform: rotateY(720deg);}
+}
+.now:hover .engineer{
+  display: block;
+}
+@media screen and (max-width:400px){
+  .gird-two{
+    padding-right: 0;
+  }
+}
+@media screen and (max-width:1000px){
+  .wrapper{
+margin: 0 auto;
+  }
+}

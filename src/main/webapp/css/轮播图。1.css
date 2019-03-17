@@ -1,0 +1,191 @@
+* {
+    margin:0;
+    padding:0;
+}
+body{
+    position: relative;
+}
+ul {
+    list-style:none;
+}
+
+#wrap {
+    width:100%;
+    overflow:hidden;
+}
+
+#slider {
+    margin-left: 0;
+    width:500%;
+    color:#fff;
+    -webkit-animation:slider 18s ease-out infinite;
+}
+
+#slider img {
+    width:20%;
+}
+
+/*创建三种动画策略*/
+@-webkit-keyframes slider {
+
+    0%,25% {
+        margin-left: 0;
+    }
+    35%, 50% {
+        margin-left: -100%;
+    }
+    60%,100% {
+        margin-left: -200%;
+    }
+}
+/*@-webkit-keyframes slide2 {*/
+
+    /*0%,25% {*/
+        /*margin-left:-100% ;*/
+    /*}*/
+    /*35%, 50% {*/
+        /*margin-left: -200%;*/
+    /*}*/
+    /*60%,100% {*/
+        /*margin-left: 0;*/
+    /*}*/
+/*}*/
+/*@-webkit-keyframes slide3 {*/
+
+    /*0%,25% {*/
+        /*margin-left: -200%;*/
+    /*}*/
+    /*35%, 50% {*/
+        /*margin-left: -100%;*/
+    /*}*/
+    /*60%,100% {*/
+        /*margin-left: 0;*/
+    /*}*/
+/*}*/
+
+
+/*!*修改动画名称*!*/
+/*#l01:checked ~ #wrap #slider {*/
+    /*-webkit-animation-name:slide1;*/
+/*}*/
+
+/*#l02:checked ~ #wrap #slider {*/
+    /*-webkit-animation-name:slide2;*/
+/*}*/
+
+/*#l03:checked ~ #wrap #slider {*/
+    /*-webkit-animation-name:slide3;*/
+/*}*/
+
+
+/*!*短暂地取消动画名称，模拟重启动画*!*/
+/*#l01:active ~ #wrap #slider {*/
+    /*-webkit-animation-name:none;*/
+    /*margin-left:0;*/
+/*}*/
+
+
+/*#l02:active ~ #wrap #slider {*/
+    /*-webkit-animation-name:none;*/
+    /*margin-left:-100%;*/
+/*}*/
+
+/*#l03:active ~ #wrap #slider {*/
+    /*-webkit-animation-name:none;*/
+    /*margin-left:-200%;*/
+/*}*/
+#opts {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 84%;
+}
+
+#opts label {
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    margin-right:8px;
+ border: 1px solid #d0d6d9;
+    cursor:pointer;
+}
+
+#opts label:hover {
+    background:#d0d6d9;
+}
+
+/* 隐藏Input按钮*/
+#l01, #l02, #l03 {
+    display:none;
+}
+#arrowhead {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    width: 10px;
+    height: 10px;
+    border-top: 5px solid #e7e7e7;
+    border-right: 5px solid #e7e7e7;
+    transform: rotate(-133deg);
+    cursor:pointer;
+}
+#arrowhead1{
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    width: 10px;
+    height: 10px;
+    border-top: 5px solid #e7e7e7;
+    border-right: 5px solid #e7e7e7;
+    transform: rotate(45deg);
+    cursor:pointer;
+}
+.dot1{
+    -webkit-animation:dot1 18s ease-out infinite;
+}
+.dot2{
+    -webkit-animation:dot2 18s ease-out infinite;
+}
+.dot3{
+    -webkit-animation:dot3 18s ease-out infinite;
+}
+label{
+    background-color:#d0d6d9;
+}
+
+@-webkit-keyframes dot1 {
+    0%,25% {
+       background-color: blue;
+    }
+    35%, 50% {
+       background-color: #d0d6d9;
+    }
+    60%,100% {
+        background-color: #d0d6d9;
+    }
+}
+@-webkit-keyframes dot2 {
+
+    0%,25% {
+        background-color: #d0d6d9;
+    }
+    35%, 50% {
+        background-color: blue;
+    }
+    60%,100% {
+        background-color: #d0d6d9;
+    }
+}
+@-webkit-keyframes dot3 {
+
+    0%,25% {
+        background-color: #d0d6d9;
+    }
+    35%, 50% {
+        background-color: #d0d6d9;
+    }
+    60%,100% {
+        background-color: blue;
+    }
+}

@@ -1,0 +1,118 @@
+$color1:#fff;
+$color:#29bde0;
+$size:40px;
+$font:1rem;
+body{
+  min-width:($size * 8) ;
+  max-width:($size * 19);
+  margin: 0 auto;
+  position: relative;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+background-color: $color;
+  height: $size;
+  font-size: $font;
+  color:$color1 ;
+  border-bottom: 1px solid #dddddd;
+  img{
+    margin: 0 ($size/4);
+  }
+}
+main{
+  background-color: $color;
+}
+.police{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .police-font{
+    position: absolute;
+    top: 170px;
+    font-size: ($font*2);
+    color:$color1 ;
+  }
+}
+.news{
+display: flex;
+  align-items: center;
+  margin:  10px 9vw 10px 9vw;
+  font-size:($font*0.8);
+  color:#f5c97b ;
+}
+.vote{
+  margin:  10px 9vw 10px 9vw;
+  font-size: ($font*0.8);
+  color: $color1;
+  .list{
+margin-top: 5px;
+  }
+}
+.link{
+  height:($size*2) ;
+  border-bottom: 1px solid #dddddd;
+  .status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0 9vw 5px 9vw;
+  }
+}
+.status span{
+
+  font-size: ($font*1);
+}
+.status p{
+  font-size:($font*0.6) ;
+  color: #c7c7c7;
+}
+.day {
+  margin:  0 9vw 5px 9vw;
+  font-size: ($font*0.8);
+  color: #a6a6a6;
+}
+.night{
+  margin:  0 9vw 5px 9vw;
+  font-size: ($font*0.8);
+  color: #a6a6a6;
+}
+footer{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width:($size * 8) ;
+  max-width:($size * 19);
+  justify-content: space-between;
+  align-items: center;
+  background-color: #29bde0;
+  background-color:rgba(48,189,224,.5);
+  color: $color1;
+  .btn{
+    width: 45%;
+    line-height: 40px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f66f6f;
+  }
+  .btn a{
+    text-decoration: none;
+    color: black;
+  }
+.noon{
+  width: 45%;
+ line-height: 40px;
+  margin: 10px;
+  text-align: center;
+  background-color: #fbb435;
+}
+.noon a{
+  text-decoration: none;
+  color: black;
+}
+}
+.height-box{
+  height: 80px;
+}

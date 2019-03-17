@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnshu.task4.dao.CareerMapper">
+  <resultMap id="BaseResultMap" type="com.jnshu.task4.common.bean.Career">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="head_img" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="career_brief" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="threshold" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="satisfaction" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="growth_cycle" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="scarcity" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="pay_zero_one" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="pay_one_three" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="pay_three_five" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="num" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="need" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="career_type" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="career_details" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="create_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="update_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, head_img, name, career_brief, threshold, satisfaction, growth_cycle, scarcity,
+    pay_zero_one, pay_one_three, pay_three_five, num, need, career_type, career_details,
+    create_at, update_at
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from task4_career
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task4_career
+  </select>
+</mapper>

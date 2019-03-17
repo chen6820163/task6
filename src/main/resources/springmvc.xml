@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+    <!--设置不拦截静态资源-->
+    <!--<mvc:default-servlet-handler/>-->
+
+    <!--启用spring的一些annotation -->
+    <context:annotation-config/>
+	<!--使用注解进行mvc的配置-->
+	<mvc:annotation-driven/>
+	<!--扫描包名-->
+	<context:component-scan base-package="com.jnshu.task4.web"/>
+
+	<!-- 视图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+			<property name="prefix" value="/WEB-INF/jsp/body/"/>
+			<property name="suffix" value=".jsp"/>
+	</bean>
+    <!--配置tiles视图解析器-->
+    <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"
+          p:order="1"/>
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+
+	<!--配置拦截器-->
+	<mvc:interceptors>
+		<!--使用这个bean 下面所有的mvc映射路径都会被这个拦截器拦截 -->
+		<!--<bean class="com.jnshu.task4.web.interceptor.LoginInterceptor"/>-->
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<!--下面这些请求不拦截-->
+			<mvc:exclude-mapping path="/a/**"/>
+			<bean class="com.jnshu.task4.web.interceptor.LoginInterceptor"/>
+		</mvc:interceptor>
+		<!--<mvc:interceptor>-->
+		<!--</mvc:interceptor>-->
+	</mvc:interceptors>
+
+
+    <!-- 校验器，配置validator -->
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"></property>
+    </bean>
+</beans>
+

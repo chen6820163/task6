@@ -1,0 +1,147 @@
+body {
+  min-width: 320px;
+  max-width: 760px;
+  margin: 0 auto;
+  height: 100%; }
+
+html {
+  height: 100%; }
+
+.whole {
+  height: 100%;
+  background-color: #29bde0; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  min-width: 320px;
+  max-width: 760px;
+  height: 40px;
+  background-color: #29bde0; }
+  header img {
+    margin-right: 20px; }
+  header .header-left {
+    margin-left: 20px;
+    padding: 2px;
+    border: 1.3333333333px solid #fff; }
+  header .header-font {
+    font-size: 1rem;
+    color: #fff; }
+
+main {
+  background-color: #29bde0; }
+  main .speak {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    margin-top: 40px;
+    padding: 0 20px 0 20px;
+    font-size: 0.8rem;
+    background-color: #b9e9f5; }
+    main .speak audio {
+      opacity: 0;
+      position: absolute;
+      right: -245px; }
+  main .arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #b9e9f5;
+    margin-left: 20px; }
+  main .click {
+    padding-left: 20px;
+    color: #fff;
+    font-size: 0.8rem; }
+
+.father-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%; }
+  .father-box .option {
+    width: 25%;
+    flex-shrink: 0;
+    margin: 20px 10px 40px 10px;
+    cursor: pointer; }
+    .father-box .option .option-player {
+      border: 4px solid #fff; }
+      .father-box .option .option-player .option-player-left {
+        text-align: center;
+        padding: 25% 0;
+        font-size: 1rem;
+        background-color: #f5c97b; }
+      .father-box .option .option-player .option-player-right {
+        text-align: center;
+        padding: 8% 0;
+        font-size: 0.8rem;
+        background-color: #83b09a;
+        color: #fff; }
+
+.option-player:hover ~ .banner {
+  opacity: 1; }
+
+.footer-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  min-width: 320px;
+  max-width: 760px;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+  height: 60px;
+  background-color: #29bde0; }
+  .footer-box .vote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 40px;
+    background-color: #fbb435; }
+    .footer-box .vote a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem; }
+
+.footer-d {
+  height: 60px;
+  background-color: #29bde0; }
+
+.banner {
+  background: url(../img/task7.png) no-repeat;
+  background-position: center;
+  height: 25%;
+  background-size: 100%;
+  opacity: 0; }
+
+.icon1 {
+  height: 30px;
+  width: 30px;
+  background-position: -35px 0; }
+
+.icon2 {
+  height: 30px;
+  width: 30px;
+  background-position: 0 0; }
+
+.icon3 {
+  height: 30px;
+  width: 30px;
+  background-position: -71px 0; }
+
+.icon4 {
+  height: 30px;
+  width: 30px;
+  background-position: -108px 0; }
+
+/*# sourceMappingURL=13.1.css.map */

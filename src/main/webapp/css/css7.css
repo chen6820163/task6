@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+background-color: #f0f0f0;
+}
+.box1{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    background-color: #29bde0;
+    height: 100px;
+}
+.dash{
+    width: 1.9rem;
+    height: 0.2rem;
+    border-top: 0.2rem solid #ffffff;
+    border-bottom:0.2rem solid #ffffff;
+    background-color: #ffffff;
+    padding: 0.5rem 0;
+    margin-left: 30px;
+    background-clip:content-box;
+}
+.box2{
+    background-color: white;
+    height: 120px;
+    font-size: 40px;
+    color: #9a9a9a;
+    margin: 150px 40px 40px 40px;
+   display: flex;
+   justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    border-top: 6px solid #e7e7e7;
+    border-right: 6px solid #e7e7e7;
+    transform: rotate(45deg);
+    margin-right: 20px;
+}
+.boss{
+    background-color: white;
+    margin: 40px;
+}
+.box3{
+    color: #fbb435;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-bottom: 2px solid #fbb435;
+}
+.box4{
+    height: 120px;
+    background-color: #69d1e9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin: 30px 80px 30px 80px;
+}
+.box4 a{
+    text-decoration: none;
+    color:white;
+}
+.box5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 30px;
+}
+.box6{
+   height: 120px;
+    background-color: #69d1e9;
+    color: white;
+   position: relative;
+    font-size: 40px;
+    margin: 30px 80px 30px 80px;
+}
+.box6 p{
+    line-height: 120px;
+    text-align: center;
+
+}
+.box7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.box8{
+    height: 120px;
+    background-color: #69d1e9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+margin: 30px 80px 30px 80px;
+}
+.box9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.h{
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left:  20px solid #fbb435;
+    position:absolute;
+    top: 50%;
+    right: -6%;
+    transform: translatey(-50%);
+
+}
+.box10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.circle{
+  width: 20px;
+    height: 20px;
+    background-color: #9a9a9a;
+    border-radius:10px;
+    margin-right: 20px;
+}
+.box10 div:hover
+         {
+   
+    background-color:#29bde0;
+}
